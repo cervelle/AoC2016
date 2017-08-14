@@ -1,0 +1,6 @@
+c:\users\cervelle\documents\visual studio 2013\Projects\AoC2016\AoC2016_1\bin\Debug\AoC2016_1.exe.config
+c:\users\cervelle\documents\visual studio 2013\Projects\AoC2016\AoC2016_1\bin\Debug\AoC2016_1.exe
+c:\users\cervelle\documents\visual studio 2013\Projects\AoC2016\AoC2016_1\bin\Debug\AoC2016_1.pdb
+c:\users\cervelle\documents\visual studio 2013\Projects\AoC2016\AoC2016_1\obj\Debug\AoC2016_1.csprojResolveAssemblyReference.cache
+c:\users\cervelle\documents\visual studio 2013\Projects\AoC2016\AoC2016_1\obj\Debug\AoC2016_1.exe
+c:\users\cervelle\documents\visual studio 2013\Projects\AoC2016\AoC2016_1\obj\Debug\AoC2016_1.pdb
