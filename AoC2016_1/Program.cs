@@ -33,9 +33,8 @@ namespace AoC2016_1
             int x = 0;
             int y = 0;
 
-            var locationVisited = new List<Tuple<int, int>>();
+            var locationVisited = new Dictionary<Tuple<int, int>, bool>();
 
-            //locationVisited.Add(new Tuple<int, int>(x, y));
             CheckCrossAndAdd(locationVisited, 0, 0);
 
             foreach (var item in tab)
@@ -117,15 +116,16 @@ namespace AoC2016_1
 
         }
 
-        static public void CheckCrossAndAdd(List<Tuple<int, int>> locationVisited, int x, int y)
+        static public void CheckCrossAndAdd(Dictionary<Tuple<int, int>, bool> locationVisited, int x, int y)
         {
-            if (locationVisited.Any(v => (v.Item1 == x && v.Item2 == y)))
+            //if (locationVisited.Any(v => (v.Item1 == x && v.Item2 == y)))
+            if (locationVisited.ContainsKey(new Tuple<int, int>(x, y)))
                 Console.WriteLine("Found a cross : ({0},{1})", x, y);
             else
-                locationVisited.Add(new Tuple<int, int>(x, y));
+                locationVisited.Add(new Tuple<int, int>(x, y),true);
         }
 
-        static public void KeepTrack(List<Tuple<int, int>> locationVisited, int x, int y, int newX, int newY)
+        static public void KeepTrack(Dictionary<Tuple<int, int>, bool> locationVisited, int x, int y, int newX, int newY)
         {
             if (x==newX)
             {
@@ -143,7 +143,7 @@ namespace AoC2016_1
             }
         }
 
-        static public void KeepTrackY(List<Tuple<int, int>> locationVisited, int x, int y, int newY, int ratio)
+        static public void KeepTrackY(Dictionary<Tuple<int, int>, bool> locationVisited, int x, int y, int newY, int ratio)
         {
             while (y != newY)
 			{
@@ -152,7 +152,7 @@ namespace AoC2016_1
 			}
         }
 
-        static public void KeepTrackX(List<Tuple<int, int>> locationVisited, int x, int y, int newX, int ratio)
+        static public void KeepTrackX(Dictionary<Tuple<int, int>, bool> locationVisited, int x, int y, int newX, int ratio)
         {
             while (x != newX)
             {
