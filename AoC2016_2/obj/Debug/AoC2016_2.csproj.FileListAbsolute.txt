@@ -1,0 +1,6 @@
+C:\Users\Cervelle\Documents\Visual Studio 2013\Projects\AoC2016\AoC2016_2\bin\Debug\AoC2016_2.exe.config
+C:\Users\Cervelle\Documents\Visual Studio 2013\Projects\AoC2016\AoC2016_2\obj\Debug\AoC2016_2.csprojResolveAssemblyReference.cache
+C:\Users\Cervelle\Documents\Visual Studio 2013\Projects\AoC2016\AoC2016_2\bin\Debug\AoC2016_2.exe
+C:\Users\Cervelle\Documents\Visual Studio 2013\Projects\AoC2016\AoC2016_2\bin\Debug\AoC2016_2.pdb
+C:\Users\Cervelle\Documents\Visual Studio 2013\Projects\AoC2016\AoC2016_2\obj\Debug\AoC2016_2.exe
+C:\Users\Cervelle\Documents\Visual Studio 2013\Projects\AoC2016\AoC2016_2\obj\Debug\AoC2016_2.pdb
