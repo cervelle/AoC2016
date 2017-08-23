@@ -10,7 +10,7 @@ namespace AoC2016_4
     {
         public static void Main()
         {
-            var total = 0;
+            //var total = 0;
             const string arg = @"C:\Users\Cervelle\Documents\Visual Studio 2013\Projects\AoC2016\AoC2016_4\arg.txt";
             const string pattern = @"(?<name>.+)-(?<id>\d+)\[(?<check>.+)\]$";
             //
@@ -22,11 +22,14 @@ namespace AoC2016_4
                 string encrypted= new string(m.Groups["name"].Value.Where(x=>char.IsLetterOrDigit(x)).ToArray());
                 var id = int.Parse(m.Groups["id"].Value);
 
-                //var decrypt = Decrypt(encrypted, id);
 
-                bool check = CheckValidity(encrypted, m.Groups["check"].Value);
+                if (Decrypt(encrypted, id % 26).Contains("north"|"pole"))
+                    Console.WriteLine("{0}",id);
 
-                total += check ? id : 0;
+                    
+
+
+                //total += check ? id : 0;
 
 //                Console.WriteLine(m.Groups["id"].Value);
 
@@ -56,13 +59,29 @@ namespace AoC2016_4
             return true;
         }
 
-        static internal string Decrypt(string msg, int code)
+        static string Decrypt(string value, int shift)
         {
-            code = code%26;
-            var result = new string[msg.Length];
-
-            
-            return result.ToString();
+            char[] buffer = value.ToCharArray();
+            for (int i = 0; i < buffer.Length; i++)
+            {
+                // Letter.
+                char letter = buffer[i];
+                // Add shift to all.
+                letter = (char)(letter + shift);
+                // Subtract 26 on overflow.
+                // Add 26 on underflow.
+                if (letter > 'z')
+                {
+                    letter = (char)(letter - 26);
+                }
+                else if (letter < 'a')
+                {
+                    letter = (char)(letter + 26);
+                }
+                // Store.
+                buffer[i] = letter;
+            }
+            return new string(buffer);
         }
     }
 }
