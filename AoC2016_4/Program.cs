@@ -23,7 +23,7 @@ namespace AoC2016_4
                 var id = int.Parse(m.Groups["id"].Value);
 
 
-                if (Decrypt(encrypted, id % 26).Contains("north"|"pole"))
+                if (Decrypt(encrypted, id % 26).Contains("north"))
                     Console.WriteLine("{0}",id);
 
                     
